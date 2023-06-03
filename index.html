@@ -15,13 +15,14 @@
 
 		<script>
 			function switchContent(contentId) {
-			  const contentElements = document.getElementsByClassName('content');
-			  for (let i = 0; i < contentElements.length; i++) {
-				contentElements[i].style.display = 'none';
-			  }
-			  document.getElementById(contentId).style.display = 'block';
-			}
-			</script>
+  				const contentElements = document.getElementsByClassName('content');
+  				for (let i = 0; i < contentElements.length; i++) {
+    				contentElements[i].style.display = 'none';
+  				}
+  				document.getElementById(contentId).style.display = 'block';
+				}
+		</script>
+		
 
 		<!-- Header -->
 			<header id="header">
@@ -34,6 +35,27 @@
 
 		<!-- Main -->
 			<div id="main">
+
+				<div class="navbar">
+					<button onclick="switchContent('datasets')">Datasets</button>
+					<button onclick="switchContent('notebooks')">Notebooks</button>
+					<button onclick="switchContent('apps')">Apps</button>
+				  </div>
+
+				  <div id="datasets" class="content">
+					<!-- Your portfolio content goes here -->
+					<p>These are my datasets</p>
+				  </div>
+				  
+				  <div id="notebooks" class="content">
+					<!-- Your blog content goes here -->
+					<p>These are my notebooks</p>
+				  </div>
+
+				  <div id="apps" class="content">
+					<!-- Your blog content goes here -->
+					<p>These are my notebooks</p>
+				  </div>
 
 					<section id="one">
 						<header class="major">
@@ -51,23 +73,23 @@
 						<h2>Recent Work</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								<a href="images/fulls/72-seasons.jpg" class="image fit thumb"><img src="images/thumbs/72-seasons.jpg" alt="" /></a>
+								<h3>Metallica Songs Analysis</h3>
+								<p>Metallica Spotify Dataset & Analytics <a href="https://github.com/jon-bown/metallica">Repo</a></p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								<a href="images/fulls/F1-logo.png" class="image fit thumb"><img src="images/thumbs/F1-logo.png" alt="" /></a>
+								<h3>Formula 1</h3>
+								<p>Formula 1 Post-Race Report <a href="https://www.kaggle.com/code/jonbown/formula-1-post-race-summary">Kaggle</a> </p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
+								<h3>Euclid's Elements</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
+								<h3></h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
