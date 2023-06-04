@@ -14,6 +14,9 @@
 	<body class="is-preload">
 
 		<script>
+			window.onload = function() {
+    			document.getElementById("mathematics").click();
+			};
 			function switchContent(contentId) {
   				const contentElements = document.getElementsByClassName('content');
   				for (let i = 0; i < contentElements.length; i++) {
@@ -37,76 +40,85 @@
 			<div id="main">
 
 				<div class="navbar">
+					<button onclick="switchContent('mathematics')">Mathematics</button>
 					<button onclick="switchContent('datasets')">Datasets</button>
 					<button onclick="switchContent('notebooks')">Notebooks</button>
 					<button onclick="switchContent('apps')">Apps</button>
+					<button onclick="switchContent('blog')">Blog</button>
+				  </div>
+
+				  <div id="mathematics" class="content">
+					<h2>Recent Work</h2>
+						<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/euclid.png" class="image fit thumb"><img src="images/thumbs/euclid.png" alt="" /></a>
+								<h3>Euclid's Elements</h3>
+								<p>Propositions 1-20 of Euclid's Elements implemented in Python</p>
+								<p><a href="https://github.com/jon-bown/euclid" target="_blank">View on GitHub</a></p>
+								<p><a href="https://www.kaggle.com/code/jonbown/euclid-s-elements-book-1-props-1-20" target="_blank">View on Kaggle</a></p>
+							</article>
+						</div>
+						<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/dalmuti.png" class="image fit thumb"><img src="images/thumbs/dalmuti.png" alt="" /></a>
+								<h3>Probability of a Revolution</h3>
+								<p>Analysis of rare event in the card game The Great Dalmuti</p>
+								<p><a href="https://github.com/jon-bown/dalmuti" target="_blank">View on GitHub</a></p>
+							</article>
+						</div>
 				  </div>
 
 				  <div id="datasets" class="content">
-					<!-- Your portfolio content goes here -->
-					<p>These are my datasets</p>
+					<h2>Recent Work</h2>
+					<div class="row">
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="images/fulls/72-seasons.jpg" class="image fit thumb"><img src="images/thumbs/72-seasons.jpg" alt="" /></a>
+							<h3>Metallica Songs</h3>
+							<p>Metallica Spotify Dataset</p>
+							<p><a href="https://github.com/jon-bown/metallica" target="_blank">View on GitHub</a></p>
+							<p><a href="https://www.kaggle.com/datasets/jonbown/metallica-songs" target="_blank">View on Kaggle</a></p>
+						</article>
+					</div>
 				  </div>
 				  
 				  <div id="notebooks" class="content">
-					<!-- Your blog content goes here -->
-					<p>These are my notebooks</p>
+					<h2>Recent Work</h2>
+					<div class="row">
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="images/fulls/72-seasons.jpg" class="image fit thumb"><img src="images/thumbs/72-seasons.jpg" alt="" /></a>
+							<h3>Metallica Songs Analysis</h3>
+							<p>Metallica Spotify Data Analytics</p>
+							<p><a href="https://github.com/jon-bown/metallica" target="_blank">View on GitHub</a></p>
+							<p><a href="https://www.kaggle.com/code/jonbown/metallica-visualize-em-all" target="_blank">View on Kaggle</a></p>
+						</article>
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="images/fulls/F1-logo.png" class="image fit thumb"><img src="images/thumbs/F1-logo.png" alt="" /></a>
+							<h3>Formula 1</h3>
+							<p>Formula 1 Post-Race Report </p>
+							<p><a href="https://www.kaggle.com/code/jonbown/formula-1-post-race-summary" target="_blank">View on Kaggle</a></p>
+						</article>
+					</div>
 				  </div>
 
 				  <div id="apps" class="content">
-					<!-- Your blog content goes here -->
-					<p>These are my notebooks</p>
+					<h2>Recent Work</h2>
+					<div class="row">
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="images/fulls/watchlist.png" class="image fit thumb"><img src="images/thumbs/watchlist.png" alt="" /></a>
+							<h3>Watchlist</h3>
+							<p>Custom Watchlists on Android<a href="https://github.com/jon-bown/metallica">Repo</a></p>
+							<p><a href="https://github.com/jon-bown/watchlist" target="_blank">View on GitHub</a></p>
+						</article>
+					</div>
 				  </div>
 
-					<section id="one">
-						<header class="major">
-							<h2>Ipsum lorem dolor aliquam ante commodo<br />
-							magna sed accumsan arcu neque.</h2>
-						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-						<ul class="actions">
-							<li><a href="https://jon-bown.github.io/blog" class="button">Blog</a></li>
-						</ul>
-					</section>
+				  <div id="blog" class="content">
+					<h2>Recent Blog Posts</h2>
+					<ul id="recentPosts"></ul>
+				  </div>
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/72-seasons.jpg" class="image fit thumb"><img src="images/thumbs/72-seasons.jpg" alt="" /></a>
-								<h3>Metallica Songs Analysis</h3>
-								<p>Metallica Spotify Dataset & Analytics <a href="https://github.com/jon-bown/metallica">Repo</a></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/F1-logo.png" class="image fit thumb"><img src="images/thumbs/F1-logo.png" alt="" /></a>
-								<h3>Formula 1</h3>
-								<p>Formula 1 Post-Race Report <a href="https://www.kaggle.com/code/jonbown/formula-1-post-race-summary">Kaggle</a> </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Euclid's Elements</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3></h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
-					</section>
+
+
 				  
 				<!-- Four -->
 				<!--
@@ -432,18 +444,32 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://github.com/Jon-bown" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/jonathan-bown/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="mailto:Jonathan.k.bown@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>						
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Jonathan Bown</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>
 
-		<!-- Scripts -->
+		<!-- Scripts -->		
+		<script>
+			fetch('https://jon-bown.github.io/blog/feed.xml')
+				.then(response => response.text())
+				.then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+				.then(data => {
+					const items = data.querySelectorAll('entry');
+					let html = '';
+					items.forEach((item, index) => {
+						if(index < 5) { // limit to the last 5 posts
+							html += `<li><a href="${item.querySelector('link').getAttribute('href')}">${item.querySelector('title').innerHTML}</a></li>`;
+						}
+					});
+					document.querySelector('#recentPosts').innerHTML = html;
+				});
+		</script>	
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
