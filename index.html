@@ -15,7 +15,7 @@
 
 		<script>
 			window.onload = function() {
-    			document.getElementById("mathematics").click();
+    			document.getElementById("mathematicsButton").click();
 			};
 			function switchContent(contentId) {
   				const contentElements = document.getElementsByClassName('content');
@@ -23,6 +23,19 @@
     				contentElements[i].style.display = 'none';
   				}
   				document.getElementById(contentId).style.display = 'block';
+
+
+				    // Remove 'active' class from all navbar items
+					var navbarItems = document.getElementsByClassName('navbar-item');
+    				for (var i = 0; i < navbarItems.length; i++) {
+        					navbarItems[i].classList.remove('active');
+    					}
+
+    				// Add 'active' class to clicked navbar item
+   					 var clickedButton = document.getElementById(contentId + 'Button');
+    				if (clickedButton) {
+        				clickedButton.classList.add('active');
+    				}
 				}
 		</script>
 		
@@ -40,30 +53,29 @@
 			<div id="main">
 
 				<div class="navbar">
-					<button onclick="switchContent('mathematics')">Mathematics</button>
-					<button onclick="switchContent('datasets')">Datasets</button>
-					<button onclick="switchContent('notebooks')">Notebooks</button>
-					<button onclick="switchContent('apps')">Apps</button>
-					<button onclick="switchContent('blog')">Blog</button>
+					<button id="mathematicsButton" class="navbar-item" onclick="switchContent('mathematics')">Mathematics</button>
+					<button id="datasetsButton" class="navbar-item" onclick="switchContent('datasets')">Datasets</button>
+					<button id="notebooksButton" class="navbar-item" onclick="switchContent('notebooks')">Notebooks</button>
+					<button id="appsButton" class="navbar-item" onclick="switchContent('apps')">Apps</button>
+					<button id="blogButton" class="navbar-item" onclick="switchContent('blog')">Blog</button>
+					<button id="reposButton" class="navbar-item" onclick="switchContent('repos')">Repos</button>
 				  </div>
 
 				  <div id="mathematics" class="content">
-					<h2>Recent Work</h2>
+					<h2>Recent Mathematics Work</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/euclid.png" class="image fit thumb"><img src="images/thumbs/euclid.png" alt="" /></a>
+								<a href="https://www.kaggle.com/code/jonbown/euclid-s-elements-book-1-props-1-20" class="image fit thumb"><img src="images/thumbs/euclid.png" alt="" /></a>
 								<h3>Euclid's Elements</h3>
 								<p>Propositions 1-20 of Euclid's Elements implemented in Python</p>
 								<p><a href="https://github.com/jon-bown/euclid" target="_blank">View on GitHub</a></p>
-								<p><a href="https://www.kaggle.com/code/jonbown/euclid-s-elements-book-1-props-1-20" target="_blank">View on Kaggle</a></p>
 							</article>
 						</div>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/dalmuti.png" class="image fit thumb"><img src="images/thumbs/dalmuti.png" alt="" /></a>
+								<a href="https://github.com/jon-bown/dalmuti" class="image fit thumb"><img src="images/thumbs/dalmuti.png" alt="" /></a>
 								<h3>Probability of a Revolution</h3>
 								<p>Analysis of rare event in the card game The Great Dalmuti</p>
-								<p><a href="https://github.com/jon-bown/dalmuti" target="_blank">View on GitHub</a></p>
 							</article>
 						</div>
 				  </div>
@@ -72,12 +84,28 @@
 					<h2>Recent Work</h2>
 					<div class="row">
 						<article class="col-6 col-12-xsmall work-item">
-							<a href="images/fulls/72-seasons.jpg" class="image fit thumb"><img src="images/thumbs/72-seasons.jpg" alt="" /></a>
+							<a href="https://www.kaggle.com/datasets/jonbown/metallica-songs" class="image fit thumb"><img src="images/thumbs/72-seasons.jpg" alt="" /></a>
 							<h3>Metallica Songs</h3>
 							<p>Metallica Spotify Dataset</p>
 							<p><a href="https://github.com/jon-bown/metallica" target="_blank">View on GitHub</a></p>
-							<p><a href="https://www.kaggle.com/datasets/jonbown/metallica-songs" target="_blank">View on Kaggle</a></p>
 						</article>
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="https://www.kaggle.com/datasets/jonbown/simpsons-episodes-2016" class="image fit thumb"><img src="images/thumbs/simpsons.jpg" alt="" /></a>
+							<h3>Simpsons Episodes & Ratings</h3>
+							<p><a href="https://github.com/jon-bown/simpsons" target="_blank">View on GitHub</a></p>
+						</article>
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="https://www.kaggle.com/datasets/jonbown/marvel-screen-time" class="image fit thumb"><img src="images/thumbs/marvel.jpg" alt="" /></a>
+							<h3>Marvel Character Screen Time</h3>
+						</article>	
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="https://www.kaggle.com/datasets/jonbown/christmas-movies" class="image fit thumb"><img src="images/thumbs/christmas.jpg" alt="" /></a>
+							<h3>Christmas Movies</h3>
+						</article>
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="https://www.kaggle.com/datasets/jonbown/london-tube-station-usage" class="image fit thumb"><img src="images/thumbs/london.png" alt="" /></a>
+							<h3>London Underground Station Usage (07-17)</h3>
+						</article>																				
 					</div>
 				  </div>
 				  
@@ -85,17 +113,35 @@
 					<h2>Recent Work</h2>
 					<div class="row">
 						<article class="col-6 col-12-xsmall work-item">
-							<a href="images/fulls/72-seasons.jpg" class="image fit thumb"><img src="images/thumbs/72-seasons.jpg" alt="" /></a>
+							<a href="https://www.kaggle.com/code/jonbown/metallica-visualize-em-all" class="image fit thumb"><img src="images/thumbs/72-seasons.jpg" alt="" /></a>
 							<h3>Metallica Songs Analysis</h3>
 							<p>Metallica Spotify Data Analytics</p>
 							<p><a href="https://github.com/jon-bown/metallica" target="_blank">View on GitHub</a></p>
-							<p><a href="https://www.kaggle.com/code/jonbown/metallica-visualize-em-all" target="_blank">View on Kaggle</a></p>
 						</article>
 						<article class="col-6 col-12-xsmall work-item">
-							<a href="images/fulls/F1-logo.png" class="image fit thumb"><img src="images/thumbs/F1-logo.png" alt="" /></a>
+							<a href="https://www.kaggle.com/code/jonbown/formula-1-post-race-summary" class="image fit thumb"><img src="images/thumbs/F1-logo.png" alt="" /></a>
 							<h3>Formula 1</h3>
 							<p>Formula 1 Post-Race Report </p>
-							<p><a href="https://www.kaggle.com/code/jonbown/formula-1-post-race-summary" target="_blank">View on Kaggle</a></p>
+						</article>
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="https://www.kaggle.com/code/jonbown/u-s-weekend-box-office-report" class="image fit thumb"><img src="images/thumbs/movie-theater-popcorn.jpg" alt="" /></a>
+							<h3>Weekend Box Office Report</h3>
+							<p> Weekly summary of box office trends via web scraping </p>
+						</article>
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="https://www.kaggle.com/code/jonbown/economics-of-data-careers" class="image fit thumb"><img src="images/thumbs/edc.png" alt="" /></a>
+							<h3>Economics of Data Careers</h3>
+							<p> Exploration of data career salaries dataset</p>
+						</article>
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="https://www.kaggle.com/code/jonbown/stem-income-disparity-does-it-exist" class="image fit thumb"><img src="images/thumbs/stem.png" alt="" /></a>
+							<h3>STEM Income Disparity Analysis</h3>
+							<p>Claims about racial disparities in tech salaries put to the test. </p>
+						</article>
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="https://www.kaggle.com/code/jonbown/forecasting-utah-drought-conditions" class="image fit thumb"><img src="images/thumbs/drought.jpg" alt="" /></a>
+							<h3>Utah Drought Forecast</h3>
+							<p> Time Series Analysis of Utah Drought Data</p>
 						</article>
 					</div>
 				  </div>
@@ -104,10 +150,14 @@
 					<h2>Recent Work</h2>
 					<div class="row">
 						<article class="col-6 col-12-xsmall work-item">
-							<a href="images/fulls/watchlist.png" class="image fit thumb"><img src="images/thumbs/watchlist.png" alt="" /></a>
+							<a href="https://github.com/jon-bown/watchlist" class="image fit thumb"><img src="images/thumbs/watchlist.png" alt="" /></a>
 							<h3>Watchlist</h3>
-							<p>Custom Watchlists on Android<a href="https://github.com/jon-bown/metallica">Repo</a></p>
-							<p><a href="https://github.com/jon-bown/watchlist" target="_blank">View on GitHub</a></p>
+							<p>Custom Watchlists on Android</p>
+						</article>
+						<article class="col-6 col-12-xsmall work-item">
+							<a href="https://apps.apple.com/us/app/beach-ball-runner/id1514274329" class="image fit thumb"><img src="images/thumbs/beach.png" alt="" /></a>
+							<h3>Beach Ball Runner</h3>
+							<p>iOS Game</p>
 						</article>
 					</div>
 				  </div>
@@ -118,10 +168,20 @@
 
 					<section id="one">
 						<ul class="actions">
-							<li><a href="https://jon-bown.github.io/blog" class="button">Blog</a></li>
+							<li><a href="https://jon-bown.github.io/blog" class="button">View Blog Page</a></li>
 						</ul>
 					</section>
 				  </div>
+
+
+				  <div id="repos" class="content">
+					<h2>Recent Repositories</h2>
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="https://github.com/jon-bown/kaggle-data-pipeline" class="image fit thumb"><img src="images/thumbs/kdp.jpg" alt="" /></a>
+						<h3>Kaggle Data Pipeline</h3>
+						<p>Everything you need to build Kaggle dataset pipelines</p>
+					</article>
+				  </div>				  
 
 
 
