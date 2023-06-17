@@ -2086,8 +2086,16 @@ input, select, textarea {
 
 		.image.thumb {
 			text-align: center;
+			width: 300px;
+			height: 200px;
+			overflow: hidden;
 		}
-
+		
+		.image.thumb img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 		.image.thumb:before {
 			content: "";
 			position: absolute;
