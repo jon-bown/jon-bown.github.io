@@ -2108,14 +2108,14 @@ input, select, textarea {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.6); /* Adjust the alpha value for darkness */
-	opacity: 0;
+	background: rgba(0, 0, 0, 0); /* Start with a fully transparent background */
 	transition: opacity 0.2s ease-in-out;
   }
   
   .image.thumb:hover:before {
-	opacity: 1;
+	background: rgba(0, 0, 0, 0.6); /* Adjust alpha value for darkness */
   }
+  
   
   .image.thumb:after {
 	content: "View";
