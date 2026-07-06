@@ -1,148 +1,20 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Jonathan Bown's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-
-		<script>
-			window.onload = function() {
-    			document.getElementById("mathematicsButton").click();
-			};
-			function switchContent(contentId) {
-  				const contentElements = document.getElementsByClassName('content');
-  				for (let i = 0; i < contentElements.length; i++) {
-    				contentElements[i].style.display = 'none';
-  				}
-  				document.getElementById(contentId).style.display = 'block';
-
-
-				    // Remove 'active' class from all navbar items
-					var navbarItems = document.getElementsByClassName('navbar-item');
-    				for (var i = 0; i < navbarItems.length; i++) {
-        					navbarItems[i].classList.remove('active');
-    					}
-
-    				// Add 'active' class to clicked navbar item
-   					 var clickedButton = document.getElementById(contentId + 'Button');
-    				if (clickedButton) {
-        				clickedButton.classList.add('active');
-    				}
-				}
-		</script>
-		
-
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/profile.png" alt="" /></a>
-					<h1><strong>Jonathan Bown</strong></h1>
-						<h1>MLOps Engineer</h1>
-					
-				</div>
-			</header>
-
-		<!-- Main -->
-			<div id="main">
-
-				<div>
-					<h1>Project Portfolio</h1>
-
-				</div>
-
-				<div class="navbar">
-					<button id="mathematicsButton" class="navbar-item" onclick="switchContent('mathematics')">Mathematics</button>
-					<button id="mlButton" class="navbar-item" onclick="switchContent('ml')">Machine Learning</button>
-					<button id="datasetsButton" class="navbar-item" onclick="switchContent('datasets')">Datasets</button>
-					<button id="notebooksButton" class="navbar-item" onclick="switchContent('notebooks')">Notebooks</button>
-					<button id="appsButton" class="navbar-item" onclick="switchContent('apps')">Apps</button>
-					<button id="reposButton" class="navbar-item" onclick="switchContent('repos')">Repos</button>
-					<button id="blogButton" class="navbar-item" onclick="switchContent('blog')">Blog</button>
-					<button id="blogButton" class="navbar-item" onclick="switchContent('bio')">Bio</button>
-				  </div>
-
-				  <div id="mathematics" class="content">
-					<h2>Recent Work</h2>
-					<div class="row">
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="/pages/source/Structural_Change_Points_bown_2019.pdf" class="image fit thumb"><img src="images/GPRO_price_stoptime.png" alt="" /></a>
-							<h3>Masters Thesis</h3>
-							<p>Structural Change Point Testing with Application to Stock Returns</p>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="/pages/source/Conversion_rate_qual_summary.pdf" class="image fit thumb"><img src="images/distribution.png" alt="" /></a>
-							<h3>Conversion Rate Quality</h3>
-							<p>Structural Change Point Testing with Application to Stock Returns</p>
-						</article>
-					</div>
-					<div class="row">
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="/pages/source/NBA_Player_Valuations_2019.html" class="image fit thumb"><img src="images/Utah_Jazz_Logo.png" alt="" /></a>
-							<h3>NBA Player Evaluations</h3>
-							<p>Utah Jazz trade evaluations using sports economics</p>
-							<p><a href="https://github.com/jon-bown/euclid" target="_blank">View on GitHub</a></p>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="/pages/source/NBA_Player_Valuations_2019.pdf" class="image fit thumb"><img src="images/nba_logo.jpg" alt="" /></a>
-							<h3>NBA Player Metrics</h3>
-							<p>Comparison of different sports economics metrics for player comparison</p>
-						</article>
-					</div>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://www.kaggle.com/code/jonbown/euclid-s-elements-book-1-props-1-20" class="image fit thumb"><img src="images/thumbs/euclid.png" alt="" /></a>
-								<h3>Euclid's Elements</h3>
-								<p>Propositions 1-20 of Euclid's Elements implemented in Python</p>
-								<p><a href="https://github.com/jon-bown/euclid" target="_blank">View on GitHub</a></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="/pages/cr_similarity.pdf" class="image fit thumb"><img src="images/crs.png" alt="" /></a>
-								<h3>Credit Risk Similarity</h3>
-								<p>Exploration of Fannie Mae Credit Data</p>
-							</article>
-						</div>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/jon-bown/dalmuti" class="image fit thumb"><img src="images/thumbs/dalmuti.png" alt="" /></a>
-								<h3>Probability of a Revolution</h3>
-								<p>Analysis of rare event in the card game The Great Dalmuti</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="/pages/gt_spiderman.pdf" class="image fit thumb"><img src="images/disney_sony.jpg" alt="" /></a>
-								<h3>Game Theory & Spider-man</h3>
-								<p>Application of Game Theory to Sony/Marvel Studios negitiations</p>
-								<p><a href="https://github.com/jon-bown/game-theory-spider-man" target="_blank">View on GitHub</a></p>
-							</article>
-						</div>
-				  </div>
-
-				  <div id="ml" class="content">
-					<h2>Recent Work</h2>
-					<div class="row">
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="/pages/source/adversarial_super_bowl.pdf" class="image fit thumb"><img src="images/thumbs/v2_before-sqadv.png" alt="" /></a>
-							<h3>Adversarial Super Bowl: Improving QA Performance with AdvQA</h3>
-							<p>Improving QA ability of ELECTRA-small with adversarial data</p>
-							<p><a href="https://www.kaggle.com/datasets/jonbown/adv-qa" target="_blank">Kaggle Dataset</a></p>
-							<p><a href="https://github.com/jon-bown/nlp-utaustin-FA23/blob/main/final-nlp-project.ipynb" target="_blank">Code</a></p>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="/pages/source/feedback_prize_final_report.pdf" class="image fit thumb"><img src="images/thumbs/pca-cll.png" alt="" /></a>
-							<h3>Constrained Language Learning</h3>
-							<p>Feedback Prize: Kaggle Competition Methodology</p>
-						</article>
-					</div>
-				  </div>
-
-
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="refresh" content="0; url=/portfolio/" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Redirecting…</title>
+	<link rel="canonical" href="https://jon-bown.github.io/portfolio/" />
+	<script>
+	  // Immediate JS redirect as a fallback for clients that ignore meta-refresh
+	  window.location.replace('/portfolio/');
+	</script>
+  </head>
+  <body>
+	<p>If you are not redirected automatically, <a href="/portfolio/">click here to go to /portfolio/</a>.</p>
+  </body>
+</html>
 
 				  <div id="datasets" class="content">
 					<h2>Recent Work</h2>
